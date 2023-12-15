@@ -1,48 +1,42 @@
-*
-{
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+}
+*,
+*::before
+*::after {
   box-sizing: border-box;
 }
-body 
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background-color: #121212;
-}
-.arrows-body
-{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.arrow
-{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  border-top: 12px solid #fff;
-  border-left: 12px solid #fff;
-  transform: rotate(-45deg);
-  animation: arrow-load 2s infinite;
-}
-.arrow:nth-child(1)
-{
-left: 25px;
-  animation-delay: -0.4s;
-}
-.arrow:nth-child(2)
-{
-animation-delay: -0.2s;
-}
-.arrow:nth-child(3)
-{
-right: 25px;
-}
 
-
-  
-  
+:root {
+  --primary: #26134e;
+  --width: 20rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--priamry);
+}
+button {
+  min-width: var(--width);
+  width: var(--width);
+  aspect-ratio: 1 / 0.5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--width);
+  overflow: hidden;
+  background-color: #fff1;
+  border-top: 1px solid #fff2;
+  border-bottom: 1px solid #0006;
+  box-shadow: 4px 4px 14px #0005;
+  transition: background-color 400ms ease;
+}
+button i {
+  font-size: calc(var(--width) / 4.25);
+  color: white;
+  transition: color 400ms ease;
+  line-height: calc(var(--width) / 2);
+}
